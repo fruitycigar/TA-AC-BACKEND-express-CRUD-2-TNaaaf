@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Commission new agent</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        body { font-family: "Open sans", sans-serif; line-height: 1.5; }
+        nav { display: flex; justify-content: space-between; padding: 10px; } 
+        .umbrella { color:crimson; font-size: 19px; font-weight: 800; text-transform: capitalize;  }
+        .add-agent { background-color: magenta; font-size: 15px; font-weight: 800; color: white; padding: 7px 13px; border-radius: 4px; border: none;}        
+        .back { background-color:darkblue; font-size: 15px; font-weight: 800; color: white; padding: 7px 13px; border-radius: 4px; border: none;}
+        a { text-decoration: none; }
+        form { background: none; padding: 10px; border-radius: 8px; width: 60%; text-align: center; margin: 0 auto; }
+        .form-control { display: inline-block; width: 80%; padding: 12px 16px; margin: 10px; font-family: 'Courier New', Courier, monospace; }
+        fieldset { text-align: center; }
+        .form-elm { margin: auto; }
+        .submit { display: block; margin: 0 auto; padding: 12px 14px; background-color:firebrick; color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; border: none; }
+        .submit:hover { color: black}
+    </style>
+<body>
+    <nav>
+        <a href="/">
+            <div class="umbrella">Articlex</div>
+        </a>
+        <a href="/articles">
+            <button class="add-agent">Back</button>
+        </a>
+    </nav>
+    <main>
+        <div class="form-elm">
+            <form method="post" action="/articles">
+                    <h2>Add New Article</h2>
+                    <input class="form-control" name="title" type="text" placeholder="Add title">
+                    <input class="form-control" name="description" type="text" placeholder="Add description">
+                    <input class="form-control" name="author" type="text" placeholder="Add author">
+                    <input class="form-control" name="tag1"  type="text" placeholder="Add tag 1">
+                    <input class="form-control" name="tag2" type="text" placeholder="Add tag 2">
+                    <input class="form-control" name="tag3" type="text" placeholder="Add tag 3">
+                    <input class="form-control" name="tag4" type="text" placeholder="Add tag 4">
+                    <input class="form-control" name="tag5" type="text" placeholder="Add tag 5">
+                    <textarea class="form-control" name="content" rows="5" placeholder="Add main content"></textarea>
+                    <input class="form-control" name="likes" type="number" placeholder="Add number of likes">
+                    <div>
+                        <button class="submit" type="submit">add article</button>
+                    </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
