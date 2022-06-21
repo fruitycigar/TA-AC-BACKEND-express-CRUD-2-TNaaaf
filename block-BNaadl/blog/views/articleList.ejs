@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Article Database | Articlex</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body { font-family: "Open sans", sans-serif; line-height: 1.5; }
+            nav { display: flex; justify-content: space-between; padding: 10px;} 
+            .umbrella { color:crimson; font-size: 19px; font-weight: 800; text-transform: capitalize; font-family: "Open sans", sans-serif; }
+            .add-agent { background-color: magenta; font-size: 15px; font-weight: 800; color: white; padding: 7px 13px; border-radius: 4px; border: none;}
+            h1 { text-align: center; font-size: 29px; padding: 20px;}
+            main { padding: 0 70px; }
+            h2 { text-transform: capitalize;}
+            /* .book-wrapper { background: grey; padding: 4px 40px; margin-bottom: 30px; border-radius: 10px; } */
+            a { display: block; text-decoration: none; font-size: 22px; font-family: 'Courier New', Courier, monospace; color:black; font-weight: 700; }
+            a:hover { color: pink;}
+            .show-button { display: inline-block; padding: 6px 10px; background-color: black; color: white; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: 600; border: none; margin: 10px 0; border-radius: 3px; }
+            li { font-family: 'Courier New', Courier, monospace; margin-right: 10px; font-weight: 700; font-size: 18px;}
+        </style>
+    </head>
+<body>
+    <nav>
+        <a href="/">
+            <div class="umbrella">Articlex</div>
+        </a>
+        <a href="/articles/new">
+            <button class="add-agent">Add new</button>
+        </a>
+    </nav>
+    <main>
+        <h1>The best articles on the Internet right now</h1>
+        <% articles.forEach(article => { %>
+            <div class="agent-wrapper">
+                    <ol>
+                        <li><a href="/articles/<%= article._id %>"> <%= article.title %></a></li>
+                        <br>
+                    </ol>
+            </div>
+                <% }) %>
+    </main>
+</body>
+</html>
