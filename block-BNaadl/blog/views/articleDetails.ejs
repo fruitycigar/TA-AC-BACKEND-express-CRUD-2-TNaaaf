@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Article-name | Details</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://kit.fontawesome.com/91066ab110.js" crossorigin="anonymous"></script>
+        <style>
+            body { font-family: "Open sans", sans-serif; line-height: 1.5; }
+            nav { display: flex; justify-content: space-between; padding: 10px;} 
+            .umbrella { color:crimson; font-size: 19px; font-weight: 800; text-transform: capitalize;  }
+            .add-agent { background-color: magenta; font-size: 15px; font-weight: 800; color: white; padding: 7px 13px; border-radius: 4px; border: none;}
+            h1 { text-align: center; color: green; font-size: 49px; padding: 20px;}
+            main { padding: 0 100px; }
+            h2 { color: black; text-align: center; width: 60%; margin: auto;}
+            p { font-weight: 550; }
+            span { display: block; font-weight: 600; }
+            .book-wrapper { background: grey; padding: 4px 40px; margin-bottom: 30px; border-radius: 10px; }
+            a { text-decoration: none; }
+            .edit-btn { display: inline-block; padding: 9px 9px; background-color: plum; color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; border: none; margin-top: 20px; margin-right: 15px;}
+            .edit-btn:hover { color: black; }
+            .delete-btn { display: inline-block; padding: 9px 9px; background-color: red; color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; border: none; margin-top: 20px;}
+            .delete-btn:hover { color: black; }
+            .author { font-size: 18px; }
+            .tag-holder { display: flex; justify-content: center; margin-top: 30px;}
+            .tag-holder span { margin-right: 30px; padding: 10px; background-color: #F1F2F2; font-weight: 500; color:darkblue; }
+            article { margin-top: 70px; font-family: Georgia, 'Times New Roman', Times, serif;}
+            article p { width: 90%; margin: auto; line-height: 1.7; font-size: 22px; font-weight: 500; color: black; }
+            .buttons { display: flex; justify-content:center; margin-bottom: 50px; margin-top: 30px;}
+            .likes { width: 90%; margin: 20px auto; font-weight: 600; color: slateblue; font-size: 17px;}
+            .like-btn { display: inline-block; padding: 9px 9px; background-color:deeppink ; color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; border: none; margin-top: 20px; margin-right: 15px; margin-left: 15px;}
+            .like-btn:hover { color: black; }
+            .dislike-btn { display: inline-block; padding: 9px 9px; background-color: blue; color: white; text-decoration: none; text-transform: uppercase; font-weight: 600; border: none; margin-top: 20px;}
+            .dislike-btn:hover { color: black; }
+        </style>
+    </head>
+<body>
+    <nav>
+        <a href="/">
+            <div class="umbrella">Articlex</div>
+        </a>
+        <a href="/users/new">
+            <button class="add-agent">Add new</button>
+        </a>
+    </nav>
+    <main>
+        <h1><%= article.title ></h1>
+        <h2><%= article.description >
+            <p class="author">- <%= article.author ></p>
+        </h2>
+        <article>
+            <%= article.content >
+        </article>
+        <div class="likes">
+            Likes: <%= article.likes >
+        </div>
+        <div class="tag-holder">
+            <span><%= article.tag1 ></span>
+            <span><%= article.tag2 ></span>
+            <span><%= article.tag3 ></span>
+            <span><%= article.tag4 ></span>
+            <span><%= article.tag5 ></span>
+        </div>
+        <div class="buttons">
+            <a href="#">
+                <button class="edit-btn">Edit</button>
+            </a>
+            <a href="#">
+                <button class="delete-btn">Delete</button>
+            </a>
+            <a href="#">
+                <button class="like-btn">Thumbs up</button>
+            </a>
+            <a href="#">
+                <button class="dislike-btn">Thumbs down</button>
+            </a>      
+        </div>
+    </main>
+</body>
+</html>
